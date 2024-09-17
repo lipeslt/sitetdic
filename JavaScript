@@ -1,0 +1,15 @@
+document.getElementById('addCard').addEventListener('click', function() {
+    const board = document.getElementById('board');
+    const newCard = document.createElement('div');
+    newCard.className = 'card';
+    
+    const title = prompt('Título do novo item:');
+    const content = prompt('Conteúdo do novo item:');
+    
+    if (title && content) {
+        newCard.innerHTML = `<h2>${title}</h2><p>${content}</p>`;
+        board.appendChild(newCard);
+    } else {
+        alert('Título e conteúdo são obrigatórios!');
+    }
+});
